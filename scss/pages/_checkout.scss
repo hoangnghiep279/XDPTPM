@@ -1,0 +1,147 @@
+$primary-color: #005d63;
+$secondary-color: #fff;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// ===========address============
+.checkout {
+    padding: 40px 0;
+    &-breadcrumbs {
+        margin: 0 0 20px 0;
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    &__required {
+        color: red;
+    }
+
+    &__input,
+    &__select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    &__input:focus,
+    &__select:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    &__back {
+        margin-top: 15px;
+        color: $primary-color;
+        font-size: 1.6rem;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    &__back:hover {
+        text-decoration: underline;
+    }
+}
+.checkout-prod {
+    height: 100%;
+
+    border-left: 2px solid #6a5b5b22;
+    padding-left: 10px;
+    &__table {
+        display: flex;
+        padding-bottom: 50px;
+
+        border-bottom: 2px solid #6a5b5b22;
+    }
+    &__names {
+        flex: 1;
+    }
+    &__quantity {
+        .checkout-prod__item {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__price {
+        margin-left: 20px;
+        .checkout-prod__item {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__title {
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-wrap: nowrap;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #6a5b5b22;
+    }
+    &__item {
+        text-wrap: nowrap;
+        margin-top: 15px;
+        font-size: 1.5rem;
+        &:last-child {
+            font-weight: 600;
+        }
+    }
+    &__btn {
+        margin-top: 20px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.payment-method {
+    &__item {
+        font-size: 1.6rem;
+    }
+    &__item + &__item {
+        margin-left: -24px;
+    }
+}
+.method-form {
+    margin-top: -10px;
+    &__group {
+        margin-bottom: 15px;
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}

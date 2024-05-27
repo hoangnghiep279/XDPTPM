@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chợ sinh viên</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./template/header-logined.html");
+        </script>
+        <main class="category">
+            <div class="container home">
+                <div class="home__container">
+                    <div class="category-top">
+                        <h1 class="category__title">Đồ gia dụng</h1>
+                    </div>
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="./index-logined.html" class="breadcrumbs__link">
+                                Trang chủ
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Các loại khác</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home__container">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="product-portfolio">
+                                <h2 class="product-portfolio__title">Danh mục sản phẩm</h2>
+                                <ul class="product-portfolio__list">
+                                    <li class="product-portfolio__item">
+                                        <a href="./category-houseware.html" class="product-portfolio__link"
+                                            >Đồ gia dụng</a
+                                        >
+                                    </li>
+                                    <li class="product-portfolio__item">
+                                        <a href="" class="product-portfolio__link">Điện tử</a>
+                                    </li>
+                                    <li class="product-portfolio__item">
+                                        <a href="./category-refrigeration.html" class="product-portfolio__link"
+                                            >Đồ điện lạnh</a
+                                        >
+                                    </li>
+                                    <li class="product-portfolio__item">
+                                        <a href="./category-clothes.html" class="product-portfolio__link">Quần áo</a>
+                                    </li>
+                                    <li class="product-portfolio__item">
+                                        <a
+                                            href="./category-other.html"
+                                            class="product-portfolio__link product-portfolio__link--curent"
+                                            >Khác</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="row row-cols-3 row-cols-lg-2 row-cols-sm-1 g-3">
+                                <!-- Product card 1 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product1.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Tủ lạnh mini - Electrolux</a>
+                                            </h3>
+                                            <p class="product-card__brand">Điện lạnh</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">560.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">4.3</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 2 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product2.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Tủ lạnh mini - Tủ lạnh Aqua 50 Lít</a>
+                                            </h3>
+                                            <p class="product-card__brand">Điện lạnh</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">$53.00</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">3.4</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 3 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product3.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Quạt lửng Điện cơ QDM400</a>
+                                            </h3>
+                                            <p class="product-card__brand">Đồ gia dụng</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">300.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">5.0</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 4 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product4.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html"
+                                                    >Xe Đạp Địa Hình MTB VINBIKE Lava 1 - Phanh Đĩa, Bánh 26 Inches</a
+                                                >
+                                            </h3>
+                                            <p class="product-card__brand">Khác</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">1.200.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">4.4</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 5 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product5.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Bàn phím Bencom</a>
+                                            </h3>
+                                            <p class="product-card__brand">Đồ điện tử</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">200.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">4.3</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 6 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product6.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Bếp điện từ hồng ngoại (Kèm nồi lẩu)</a>
+                                            </h3>
+                                            <p class="product-card__brand">Đồ gia dụng</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">450.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">3.4</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 7 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product7.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html"
+                                                    >Tủ vải đựng quần áo có kệ để giày dép 1.2x1.7m</a
+                                                >
+                                            </h3>
+                                            <p class="product-card__brand">Quần áo</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">350.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">5.0</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 8 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product9.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Tai nghe lenovo</a>
+                                            </h3>
+                                            <p class="product-card__brand">Đồ điện tử</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">599.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">4.4</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 9 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product10.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Túi đeo chéo nam nữ</a>
+                                            </h3>
+                                            <p class="product-card__brand">Quần áo</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">180.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">4.3</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Product card 10 -->
+                                <div class="col">
+                                    <article class="product-card">
+                                        <div class="product-card__img-wrap">
+                                            <a href="./product-detail.html">
+                                                <img
+                                                    src="./assets/img/product/product3.jpg"
+                                                    alt=""
+                                                    class="product-card__thumb"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <h3 class="product-card__title">
+                                                <a href="./product-detail.html">Quạt lửng Điện cơ QDM400</a>
+                                            </h3>
+                                            <p class="product-card__brand">Đồ gia dụng</p>
+                                            <div class="product-card__row">
+                                                <span class="product-card__price">300.000đ</span>
+                                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                                <span class="product-card__score">5.0</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html");
+        </script>
+    </body>
+</html>

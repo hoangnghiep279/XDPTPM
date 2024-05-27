@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chợ sinh viên</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./template/header-logined.html");
+        </script>
+        <!-- MAIN -->
+        <main class="profile">
+            <div class="container">
+                <!-- Profile content -->
+                <div class="profile-container">
+                    <div class="row gy-md-3">
+                        <div class="col-3 col-xl-4 col-lg-5 col-md-12">
+                            <aside class="profile__sidebar">
+                                <!-- User -->
+                                <div class="profile-user">
+                                    <img src="./assets/img/avatar-2.png" alt="" class="profile-user__avatar" />
+                                    <h1 class="profile-user__name">Hoàng Nghiệp</h1>
+                                    <p class="profile-user__desc">Đăng ký: 17/4/2024</p>
+                                </div>
+
+                                <!-- Menu 1 -->
+                                <div class="profile-menu">
+                                    <h3 class="profile-menu__title">Quản lý tài khoản</h3>
+                                    <ul class="profile-menu__list">
+                                        <li>
+                                            <a href="./edit-personal-info.html" class="profile-menu__link">
+                                                <span class="profile-menu__icon">
+                                                    <img src="./assets/icons/profile.svg" alt="" class="icon" />
+                                                </span>
+                                                Hồ sơ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="profile-menu__link">
+                                                <span class="profile-menu__icon">
+                                                    <img src="./assets/icons/location.svg" alt="" class="icon" />
+                                                </span>
+                                                Địa chỉ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="profile-menu__link">
+                                                <span class="profile-menu__icon">
+                                                    <img src="./assets/icons/message-2.svg" alt="" class="icon" />
+                                                </span>
+                                                Quyền riêng tư
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Menu 2 -->
+                                <div class="profile-menu">
+                                    <h3 class="profile-menu__title">Trung tâm hỗ trợ</h3>
+                                    <ul class="profile-menu__list">
+                                        <li>
+                                            <a href="#!" class="profile-menu__link">
+                                                <span class="profile-menu__icon">
+                                                    <img src="./assets/icons/info.svg" alt="" class="icon" />
+                                                </span>
+                                                Hỗ trợ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="profile-menu__link">
+                                                <span class="profile-menu__icon">
+                                                    <img src="./assets/icons/danger.svg" alt="" class="icon" />
+                                                </span>
+                                                Điều khoản
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-9">
+                            <div class="cart-info">
+                                <h2 class="cart-info__heading profile__heading">
+                                    <a href="./profile.html">
+                                        <img src="./assets/icons/arrow-left.svg" alt="" class="cart-info__back-arrow" />
+                                    </a>
+                                    Thêm thẻ tín dụng hoặc thẻ ngân hàng
+                                </h2>
+                                <form action="" method="POST" class="form-1" id="form-1">
+                                    <div class="form-group">
+                                        <label for="bank" class="form-label">Ngân hàng</label>
+                                        <input
+                                            id="bank"
+                                            name="bank"
+                                            type="text"
+                                            placeholder="Ví dụ: MB"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fullname" class="form-label">Tên chủ thẻ</label>
+                                        <input
+                                            id="fullname"
+                                            name="fullname"
+                                            type="text"
+                                            placeholder="Ví dụ: Nguyen Van A"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-number" class="form-label">Số thẻ</label>
+                                        <input
+                                            id="card-number"
+                                            name="card-number"
+                                            type="text"
+                                            placeholder="Ví dụ: 3242 5678 6547 5466"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="expiration-date" class="form-label">Ngày hết hạn</label>
+                                        <input
+                                            id="expiration-date"
+                                            name="expiration-date"
+                                            type="text"
+                                            placeholder="Ví dụ: 07/30"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone-number" class="form-label">Số điện thoại</label>
+                                        <input
+                                            id="phone-number"
+                                            name="phone-number"
+                                            type="text"
+                                            placeholder="Ví dụ: 012346579"
+                                            class="form-control"
+                                        />
+                                    </div>
+
+                                    <a href="./index-logined.html" class="form-submit">Đăng nhập</a>
+                                    <p class="form__desc">
+                                        Bạn chưa có tài khoản? <a href="./sign-up.html">Đăng ký</a>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html");
+        </script>
+        <!-- Modal: confirm remove shopping cart item -->
+        <div id="delete-confirm" class="modal modal--small hide">
+            <div class="modal__content">
+                <p class="modal__text">Bạn có chắc chắn muốn xóa sản phẩm này không</p>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
+                        Hủy
+                    </button>
+                    <button
+                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Xóa
+                    </button>
+                </div>
+            </div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+        <script src="./assets/js/product-detail.js"></script>
+    </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chợ sinh viên</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./template/header-logined.html");
+        </script>
+
+        <main class="checkout">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <div class="product-container payment-breadcrumbs">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="./index-logined.html" class="breadcrumbs__link">
+                                Trang chủ
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./product-cart.html" class="breadcrumbs__link">
+                                Giỏ hàng
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="" class="breadcrumbs__link breadcrumbs__link--current"> Thanh toán sản phẩm </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-7">
+                        <h1 class="checkout__title">Thông tin giao hàng</h1>
+                        <form class="checkout__form">
+                            <div class="checkout__form-group">
+                                <label for="fullname" class="checkout__label">Họ tên </label>
+                                <input type="text" id="fullname" name="fullname" class="checkout__input" />
+                            </div>
+                            <div class="checkout__form-group">
+                                <label for="phone" class="checkout__label">Điện thoại </label>
+                                <input type="tel" id="phone" name="phone" class="checkout__input" />
+                            </div>
+                            <div class="checkout__form-group">
+                                <label for="province" class="checkout__label">Tỉnh/TP </label>
+                                <select id="province" name="province" class="checkout__select">
+                                    <option value="">Chọn Tỉnh/TP</option>
+                                    <option value="hanoi">Hà Nội</option>
+                                    <option value="hochiminh">Hồ Chí Minh</option>
+                                    <option value="danang">Đà Nẵng</option>
+                                    <option value="haiphong">Hải Phòng</option>
+                                    <option value="cantho">Cần Thơ</option>
+                                </select>
+                            </div>
+                            <div class="checkout__form-group">
+                                <label for="district" class="checkout__label">Quận/Huyện </label>
+                                <select id="district" name="district" class="checkout__select">
+                                    <option value="">Chọn Quận/Huyện</option>
+                                    <option value="hoankiem" data-province="hanoi">Hoàn Kiếm</option>
+                                    <option value="dongda" data-province="hanoi">Đống Đa</option>
+                                    <option value="quan1" data-province="hochiminh">Quận 1</option>
+                                    <option value="quan3" data-province="hochiminh">Quận 3</option>
+                                </select>
+                            </div>
+                            <div class="checkout__form-group">
+                                <label for="ward" class="checkout__label">Phường/Xã</label>
+                                <select id="ward" name="ward" class="checkout__select">
+                                    <option value="">Chọn Phường/Xã</option>
+                                    <option value="phuc_tan" data-district="hoankiem">Phúc Tân</option>
+                                    <option value="dong_xuan" data-district="hoankiem">Đồng Xuân</option>
+                                    <option value="ben_nghe" data-district="quan1">Bến Nghé</option>
+                                    <option value="tan_dinh" data-district="quan1">Tân Định</option>
+                                </select>
+                            </div>
+                            <div class="checkout__form-group">
+                                <label for="address" class="checkout__label">Địa chỉ</label>
+                                <input type="text" id="address" name="address" class="checkout__input" />
+                            </div>
+                            <a href="./product-cart.html" class="checkout__back"><< Quay lại giỏ hàng</a>
+                        </form>
+                    </div>
+                    <div class="col-5">
+                        <section class="checkout-prod">
+                            <div class="checkout-prod__table">
+                                <div class="checkout-prod__names">
+                                    <h3 class="checkout-prod__title">Tên sản phẩm</h3>
+                                    <p class="checkout-prod__item">Tủ lạnh mini - Electrolux</p>
+                                    <p class="checkout-prod__item">Tủ lạnh mini - Tủ lạnh Aqua 50 Lít</p>
+                                    <p class="checkout-prod__item">Quạt lửng Điện cơ QDM400</p>
+                                    <p class="checkout-prod__item">Tổng tiền</p>
+                                </div>
+                                <div class="checkout-prod__quantity">
+                                    <h3 class="checkout-prod__title">Số lượng</h3>
+                                    <p class="checkout-prod__item">1</p>
+                                    <p class="checkout-prod__item">1</p>
+                                    <p class="checkout-prod__item">1</p>
+                                    <p class="checkout-prod__item">3</p>
+                                </div>
+                                <div class="checkout-prod__price">
+                                    <h3 class="checkout-prod__title">Thành tiền</h3>
+                                    <p class="checkout-prod__item">560.000</p>
+                                    <p class="checkout-prod__item">800.000</p>
+                                    <p class="checkout-prod__item">300.000</p>
+                                    <p class="checkout-prod__item">1.600.000</p>
+                                </div>
+                            </div>
+                            <!-- Product content -->
+                            <div class="product-container">
+                                <div class="prod-tab payment-method js-tabs">
+                                    <ul class="prod-tab__list">
+                                        <li class="prod-tab__item payment-method__item prod-tab__item--current">
+                                            Thanh toán qua thẻ ngân hàng
+                                        </li>
+                                        <li class="prod-tab__item payment-method__item">Thanh toán khi nhận hàng</li>
+                                    </ul>
+                                    <div class="prod-tab__contents">
+                                        <div class="prod-tab__content prod-tab__content--current">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-10 col-lg-12">
+                                                    <form class="method-form">
+                                                        <div class="method-form__group">
+                                                            <label for="card-name" class="method-form__label"
+                                                                >Tên thẻ</label
+                                                            >
+                                                            <input
+                                                                type="text"
+                                                                id="card-name"
+                                                                class="method-form__input"
+                                                            />
+                                                        </div>
+                                                        <div class="method-form__group">
+                                                            <label for="card-number" class="method-form__label"
+                                                                >Số Thẻ</label
+                                                            >
+                                                            <input
+                                                                type="text"
+                                                                id="card-number"
+                                                                class="method-form__input"
+                                                            />
+                                                        </div>
+                                                        <div class="method-form__group">
+                                                            <label for="expiry" class="method-form__label"
+                                                                >Hạn Sử Dụng</label
+                                                            >
+                                                            <input type="text" id="expiry" class="method-form__input" />
+                                                        </div>
+                                                        <div class="method-form__group">
+                                                            <label for="cvv" class="method-form__label">CVV</label>
+                                                            <input type="text" id="cvv" class="method-form__input" />
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                class="btn btn--primary checkout-prod__btn js-toggle"
+                                toggle-target="#delete-confirm"
+                            >
+                                Thanh toán
+                            </button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html");
+        </script>
+        <!-- Modal: confirm remove shopping cart item -->
+        <div id="delete-confirm" class="modal modal--large hide">
+            <div class="modal__content">
+                <p class="modal__text">Bạn có chắc chắn muốn thanh toán không</p>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
+                        Hủy
+                    </button>
+                    <button
+                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Thanh toán
+                    </button>
+                </div>
+            </div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+    </body>
+</html>

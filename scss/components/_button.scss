@@ -1,0 +1,17 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 166.667%;
+    padding: 5px 15px;
+    &--boder {
+        border: 1px solid #005d63;
+        color: #005d63;
+    }
+    &--primary {
+        color: #fff;
+        background: #005d63;
+    }
+}
