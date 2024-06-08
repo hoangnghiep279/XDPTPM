@@ -2309,6 +2309,23 @@ strong {
 .prod-info__separate {
   margin-bottom: 50px;
 }
+.prod-info__act {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.prod-info__add-cart {
+  color: #005d63;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(143, 172, 174, 0.262745098);
+  border: 2px solid #005d63;
+  padding: 12px 10px;
+  gap: 5px;
+}
+.prod-info__add-cart img {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(38%) saturate(4678%) hue-rotate(165deg) brightness(94%) contrast(102%);
+}
 .prod-info__btn {
   display: inline-flex;
   padding: 0 40px;
