@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Chợ sinh viên</title>
-
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
@@ -30,31 +30,70 @@
                 </div>
                 <div class="form-group">
                     <label for="fullname" class="form-label">Tài khoản</label>
-                    <input
-                        id="fullname"
-                        name="fullname"
-                        type="text"
-                        placeholder="Email/Số điện thoại/Tên đăng nhập"
-                        class="form-control"
-                    />
+                    <input id="email" name="email" type="email" placeholder="Email" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="fullname" class="form-label">Mật khẩu</label>
-                    <input id="fullname" name="fullname" type="password" placeholder="Mật khẩu" class="form-control" />
+                    <label for="phone" class="form-label">Số điện thoại</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Số điện thoại" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="password" class="form-label">Nhập lại mật khẩu</label>
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input id="password" name="password" type="password" placeholder="Mật khẩu" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="re-password" class="form-label">Nhập lại mật khẩu</label>
                     <input
-                        id="password"
-                        name="password"
+                        id="re-password"
+                        name="re-password"
                         type="password"
                         placeholder="Nhập lại mật khẩu"
                         class="form-control"
                     />
                 </div>
-
-                <a href="./sign-in.html" class="form-submit">Đăng ký</a>
+                <p id="form__error" class="form__error" style="color: red; font-size: 1.4rem"></p>
+                <a class="form-submit" onclick="register()">Đăng ký</a>
+                <!-- href="" -->
             </form>
         </div>
+        <script>
+            const register = () => {
+                const name = document.getElementById("fullname").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                const pass = document.getElementById("password").value;
+                const rePass = document.getElementById("re-password").value;
+                console.log({
+                    name,
+                    email,
+                    phone,
+                    pass,
+                    rePass,
+                });
+                const error = document.getElementById("form__error");
+
+                if (pass !== rePass) {
+                    error.textContent = "Nhập lại mật khẩu không đúng";
+                    return;
+                }
+                axios
+                    .post("http://localhost:4444/user/register", {
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        pass: pass,
+                    })
+                    .then((response) => {
+                        console.log(response);
+                        if (response.data.code === 200) {
+                            window.location.href = "./sign-in.html";
+                        } else {
+                            error.textContent = response.data.message;
+                        }
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+            };
+        </script>
     </body>
 </html>

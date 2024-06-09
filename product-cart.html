@@ -45,7 +45,7 @@
                     <div class="row gy-xl-3">
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
-                                <div class="cart-info__list">
+                                <div id="product-list" class="cart-info__list">
                                     <!-- Cart item 1 -->
                                     <article class="cart-item">
                                         <a href="./product-detail.html">
@@ -279,6 +279,228 @@
             </div>
             <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
         </div>
-        <script src="./assets/js/slideshow.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Danh sách sản phẩm
+                const products = [
+                    {
+                        id: "1",
+                        img: "./assets/img/product/product1.jpg",
+                        name: "Tủ lạnh mini - Electrolux",
+                        type: "Lavazza",
+                        quantity: 6,
+                        price: "560.000",
+                        rate: 4.3,
+                    },
+                    // {
+                    //     id: "2",
+                    //     img: "./assets/img/product/product2.jpg",
+                    //     name: "Qualità Oro Mountain Grown - Espresso Coffee Beans",
+                    //     type: "Đồ điện tử",
+                    //     quantity: 6,
+                    //     price: "899.99",
+                    //     rate: 4.3,
+                    // },
+                    // {
+                    //     id: "3",
+                    //     img: "./assets/img/product/product3.jpg",
+                    //     name: "Tủ lạnh mini - Electrolux",
+                    //     type: "Lavazza - Caffè Espresso Black Tin - Ground coffee",
+                    //     quantity: 6,
+                    //     price: "899.99",
+                    //     rate: 4.3,
+                    // },
+                    // {
+                    //     id: "4",
+                    //     img: "./assets/img/product/product4.jpg",
+                    //     name: "Qualità Oro Mountain Grown - Espresso Coffee Beans",
+                    //     type: "Đồ điện tử",
+                    //     quantity: 6,
+                    //     price: "899.99",
+                    //     rate: 4.3,
+                    // },
+                    // {
+                    //     id: "5",
+                    //     img: "./assets/img/product/product5.jpg",
+                    //     name: "Tủ lạnh mini - Electrolux",
+                    //     type: "Đồ điện tử",
+                    //     quantity: 6,
+                    //     price: "560.000đ",
+                    //     rate: 4.3,
+                    // },
+                    // {
+                    //     id: "6",
+                    //     img: "./assets/img/product/product6.jpg",
+                    //     name: "Tủ lạnh mini - Tủ lạnh Aqua 50 Lít",
+                    //     type: "Đồ điện tử",
+                    //     quantity: 6,
+                    //     price: "660.000đ",
+                    //     rate: 4.3,
+                    // },
+                    // {
+                    //     id: "7",
+                    //     img: "./assets/img/product/product7.jpg",
+                    //     name: "Lavazza - Caffè Espresso Black Tin - Ground coffee",
+                    //     type: "Đồ điện tử",
+                    //     quantity: 6,
+                    //     price: "860.000đ",
+                    //     rate: 4.3,
+                    // },
+                    // {
+                    //     id: "8",
+                    //     img: "./assets/img/product/product9.jpg",
+                    //     name: "Lavazza - Caffè Espresso Black Tin - Ground coffee",
+                    //     type: "Đồ điện tử",
+                    //     quantity: 6,
+                    //     price: "860.000đ",
+                    //     rate: 4.3,
+                    // },
+                ];
+
+                // Hàm tạo phần tử sản phẩm
+                function createProductElement(product) {
+                    // Tạo phần tử <article>
+                    const article = document.createElement("article");
+                    article.className = "cart-item";
+
+                    // Tạo phần tử <a> với <img> bên trong
+                    const productLink = document.createElement("a");
+                    productLink.href = "./product-detail.html";
+
+                    const img = document.createElement("img");
+                    img.src = product.img;
+                    img.alt = "";
+                    img.className = "cart-item__thumb";
+
+                    productLink.appendChild(img);
+
+                    // Tạo phần tử <div> với class="cart-item__content"
+                    const contentDiv = document.createElement("div");
+                    contentDiv.className = "cart-item__content";
+
+                    // Tạo phần tử <div> với class="cart-item__content-left"
+                    const contentLeftDiv = document.createElement("div");
+                    contentLeftDiv.className = "cart-item__content-left";
+
+                    const h3 = document.createElement("h3");
+                    h3.className = "cart-item__title";
+
+                    const h3Link = document.createElement("a");
+                    h3Link.href = "./product-detail.html";
+                    h3Link.textContent = product.name;
+
+                    h3.appendChild(h3Link);
+
+                    const priceWrap = document.createElement("p");
+                    priceWrap.className = "cart-item__price-wrap";
+                    priceWrap.textContent = product.price;
+
+                    const ctrlDiv = document.createElement("div");
+                    ctrlDiv.className = "cart-item__ctrl cart-item__ctrl--md-block";
+
+                    const inputDiv1 = document.createElement("div");
+                    inputDiv1.className = "cart-item__input";
+                    inputDiv1.textContent = product.type;
+
+                    const inputImg = document.createElement("img");
+                    inputImg.className = "icon";
+                    inputImg.src = "./assets/icons/arrow-down-2.svg";
+                    inputImg.alt = "";
+
+                    inputDiv1.appendChild(inputImg);
+
+                    const inputDiv2 = document.createElement("div");
+                    inputDiv2.className = "cart-item__input";
+
+                    const minusBtn = document.createElement("button");
+                    minusBtn.className = "cart-item__input-btn";
+
+                    const minusImg = document.createElement("img");
+                    minusImg.src = "./assets/icons/minus.svg";
+                    minusImg.alt = "";
+
+                    minusBtn.appendChild(minusImg);
+
+                    const quantitySpan = document.createElement("span");
+                    quantitySpan.textContent = product.quantity;
+
+                    const plusBtn = document.createElement("button");
+                    plusBtn.className = "cart-item__input-btn";
+
+                    const plusImg = document.createElement("img");
+                    plusImg.src = "./assets/icons/plus.svg";
+                    plusImg.alt = "";
+
+                    plusBtn.appendChild(plusImg);
+
+                    inputDiv2.appendChild(minusBtn);
+                    inputDiv2.appendChild(quantitySpan);
+                    inputDiv2.appendChild(plusBtn);
+
+                    ctrlDiv.appendChild(inputDiv1);
+                    ctrlDiv.appendChild(inputDiv2);
+
+                    contentLeftDiv.appendChild(h3);
+                    contentLeftDiv.appendChild(priceWrap);
+                    contentLeftDiv.appendChild(ctrlDiv);
+
+                    // Tạo phần tử <div> với class="cart-item__content-right"
+                    const contentRightDiv = document.createElement("div");
+                    contentRightDiv.className = "cart-item__content-right";
+
+                    const totalPriceP = document.createElement("p");
+                    totalPriceP.className = "cart-item__total-price";
+                    totalPriceP.textContent = product.price;
+
+                    const rightCtrlDiv = document.createElement("div");
+                    rightCtrlDiv.className = "cart-item__ctrl";
+
+                    const heartBtn = document.createElement("button");
+                    heartBtn.className = "cart-item__ctrl-btn";
+
+                    const heartImg = document.createElement("img");
+                    heartImg.src = "./assets/icons/heart-2.svg";
+                    heartImg.alt = "";
+
+                    heartBtn.appendChild(heartImg);
+
+                    const deleteBtn = document.createElement("button");
+                    deleteBtn.className = "cart-item__ctrl-btn js-toggle";
+                    deleteBtn.setAttribute("toggle-target", "#delete-confirm");
+
+                    const trashImg = document.createElement("img");
+                    trashImg.src = "./assets/icons/trash.svg";
+                    trashImg.alt = "";
+
+                    deleteBtn.appendChild(trashImg);
+                    deleteBtn.appendChild(document.createTextNode(" Xóa"));
+
+                    rightCtrlDiv.appendChild(heartBtn);
+                    rightCtrlDiv.appendChild(deleteBtn);
+
+                    contentRightDiv.appendChild(totalPriceP);
+                    contentRightDiv.appendChild(rightCtrlDiv);
+
+                    // Thêm các phần tử con vào contentDiv
+                    contentDiv.appendChild(contentLeftDiv);
+                    contentDiv.appendChild(contentRightDiv);
+
+                    // Thêm các phần tử con vào article
+                    article.appendChild(productLink);
+                    article.appendChild(contentDiv);
+
+                    return article;
+                }
+
+                // Chèn các phần tử sản phẩm vào DOM
+                const container = document.querySelector("#product-list"); // Thay đổi '#product-list' bằng ID của phần tử cần chèn vào
+                if (container) {
+                    products.forEach((product) => {
+                        const productElement = createProductElement(product);
+                        container.appendChild(productElement);
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

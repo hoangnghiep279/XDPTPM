@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Chợ sinh viên</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
@@ -48,235 +49,7 @@
                 </div>
             </div>
             <div class="home__container">
-                <div class="row row-cols-5 row-cols-lg-2 row-cols-sm-1 g-3">
-                    <!-- Product card 1 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product1.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html">Tủ lạnh mini - Electrolux</a>
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">560.000đ</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">4.3</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 2 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product2.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html">Tủ lạnh mini - Tủ lạnh Aqua 50 Lít</a>
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">$53.00</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">3.4</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 3 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product3.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html"
-                                        >Lavazza - Caffè Espresso Black Tin - Ground coffee</a
-                                    >
-                                </h3>
-                                <p class="product-card__brand">Welikecoffee</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">$99.99</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">5.0</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 4 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product4.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html"
-                                        >Qualità Oro Mountain Grown - Espresso Coffee Beans</a
-                                    >
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">$38.65</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">4.4</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 5 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product5.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html">Tủ lạnh mini - Electrolux</a>
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">560.000đ</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">4.3</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 6 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product6.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html">Tủ lạnh mini - Tủ lạnh Aqua 50 Lít</a>
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">$53.00</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">3.4</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 7 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product7.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html"
-                                        >Lavazza - Caffè Espresso Black Tin - Ground coffee</a
-                                    >
-                                </h3>
-                                <p class="product-card__brand">Welikecoffee</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">$99.99</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">5.0</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 8 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product9.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html"
-                                        >Qualità Oro Mountain Grown - Espresso Coffee Beans</a
-                                    >
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">$38.65</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">4.4</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 9 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product10.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html">Tủ lạnh mini - Electrolux</a>
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">560.000đ</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">4.3</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 10 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/product3.jpg" alt="" class="product-card__thumb" />
-                                </a>
-                            </div>
-                            <div class="product-card__bottom">
-                                <h3 class="product-card__title">
-                                    <a href="./product-detail.html">Tủ lạnh mini - Tủ lạnh Aqua 50 Lít</a>
-                                </h3>
-                                <p class="product-card__brand">Lavazza</p>
-                                <div class="product-card__row">
-                                    <span class="product-card__price">$53.00</span>
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <span class="product-card__score">3.4</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+                <div id="product-list" class="row row-cols-5 row-cols-lg-2 row-cols-sm-1 g-3"></div>
             </div>
         </main>
 
@@ -286,5 +59,89 @@
             load("#footer", "./template/footer.html");
         </script>
         <script src="./assets/js/slideshow.js"></script>
+        <script>
+            const productList = document.getElementById("product-list");
+            productList.textContent = "Đang loading";
+            axios
+                .get("http://192.168.1.150:4444/product")
+                .then(function (response) {
+                    // xử trí khi thành công
+                    console.log(response);
+                    product = response.data.data;
+
+                    productList.textContent = null;
+
+                    for (let i = 0; i < product.length; i++) {
+                        const element = product[i];
+                        const colDiv = document.createElement("div");
+                        colDiv.classList.add("col");
+
+                        const article = document.createElement("article");
+                        article.classList.add("product-card");
+
+                        const imgWrap = document.createElement("div");
+                        imgWrap.classList.add("product-card__img-wrap");
+
+                        const aTag = document.createElement("a");
+                        aTag.href = `./product-detail.html?id=${element.id}`;
+                        const img = document.createElement("img");
+                        img.src = element.img;
+                        img.alt = "";
+                        img.classList.add("product-card__thumb");
+                        aTag.appendChild(img);
+                        imgWrap.appendChild(aTag);
+
+                        const bottomDiv = document.createElement("div");
+                        bottomDiv.classList.add("product-card__bottom");
+
+                        const h3 = document.createElement("h3");
+                        h3.classList.add("product-card__title");
+                        const nameLink = document.createElement("a");
+                        nameLink.href = `./product-detail.html?id=${element.id}`;
+                        nameLink.textContent = element.name;
+                        h3.appendChild(nameLink);
+
+                        const brandP = document.createElement("p");
+                        brandP.classList.add("product-card__brand");
+                        brandP.textContent = element.type;
+
+                        const rowDiv = document.createElement("div");
+                        rowDiv.classList.add("product-card__row");
+                        const priceSpan = document.createElement("span");
+                        priceSpan.classList.add("product-card__price");
+                        priceSpan.textContent = element.price + "đ";
+                        const starImg = document.createElement("img");
+                        starImg.src = "./assets/icons/star.svg";
+                        starImg.alt = "";
+                        starImg.classList.add("product-card__star");
+                        const scoreSpan = document.createElement("span");
+                        scoreSpan.classList.add("product-card__score");
+                        scoreSpan.textContent = element.rate;
+
+                        rowDiv.appendChild(priceSpan);
+                        rowDiv.appendChild(starImg);
+                        rowDiv.appendChild(scoreSpan);
+
+                        bottomDiv.appendChild(h3);
+                        bottomDiv.appendChild(brandP);
+                        bottomDiv.appendChild(rowDiv);
+
+                        article.appendChild(imgWrap);
+                        article.appendChild(bottomDiv);
+                        colDiv.appendChild(article);
+
+                        productList.appendChild(colDiv);
+                    }
+                })
+                .catch(function (error) {
+                    // xử trí khi bị lỗi
+                    console.log(error);
+                    const productList = document.getElementById("product-list");
+                    productList.textContent = "Có lỗi xảy ra ";
+                })
+                .finally(function () {
+                    // luôn luôn được thực thi
+                });
+        </script>
     </body>
 </html>

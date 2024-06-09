@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Chợ sinh viên</title>
-
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
@@ -39,10 +39,34 @@
                     <label for="password" class="form-label">Mật khẩu</label>
                     <input id="password" name="password" type="password" placeholder="Mật khẩu" class="form-control" />
                 </div>
-
-                <a href="./index-logined.html" class="form-submit">Đăng nhập</a>
+                <p id="form__error" class="form__error" style="color: red; font-size: 1.4rem"></p>
+                <!-- href="./index-logined.html" -->
+                <a class="form-submit" onclick="login()">Đăng nhập</a>
                 <p class="form__desc">Bạn chưa có tài khoản? <a href="./sign-up.html">Đăng ký</a></p>
             </form>
         </div>
+        <script>
+            const login = () => {
+                const user = document.getElementById("fullname").value;
+                const pass = document.getElementById("password").value;
+                const error = document.getElementById("form__error");
+                axios
+                    .post("http://localhost:4444/user", {
+                        email: user,
+                        password: pass,
+                    })
+                    .then((response) => {
+                        console.log(response);
+                        if (response.data.code === 200) {
+                            window.location.href = "./index-logined.html";
+                        } else {
+                            error.textContent = response.data.message;
+                        }
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+            };
+        </script>
     </body>
 </html>
